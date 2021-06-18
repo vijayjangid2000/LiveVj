@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_custom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.pedro.rtplibrary.view.OpenGlView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:AAEnabled="false"
+            app:aspectRatioMode="adjust"
+            app:isFlipHorizontal="false"
+            app:isFlipVertical="false"
+            app:keepAspectRatio="true"
+            app:numFilters="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/b_record"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="5dp"
+                android:background="#00000000"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_record_video"
+                app:tint="@color/purple_200" />
+
+            <ImageButton
+                android:id="@+id/b_start_stop"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#00000000"
+                android:padding="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_live_tv_24"
+                app:tint="@color/purple_200" />
+
+            <ImageButton
+                android:id="@+id/switch_camera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="5dp"
+                android:background="#00000000"
+                android:padding="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_switch_camera"
+                app:tint="@color/purple_200" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_bitrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:textColor="@color/appColor" />
+
+        <ImageButton
+            android:id="@+id/rtmpSetting"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:alpha="0.6"
+            android:layout_below="@+id/tv_bitrate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:tint="@color/purple_200" />
+
+    </RelativeLayout>
+
+</LinearLayout>
